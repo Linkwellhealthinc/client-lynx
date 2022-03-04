@@ -1,0 +1,21 @@
+name: Deploy to Digital Ocean Client Lynx
+on:
+  push:
+    branches:
+      - prod
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to Digital Ocean Client Lynx
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.CANDIDATE_CLIENT_LYNX_HOST }}
+          username: ${{ secrets.CANDIDATE_CLIENT_LYNX_USERNAME }}
+          password: ${{ secrets.CANDIDATE_CLIENT_LYNX_PASSWORD }}
+          debug: true
+          script: |
+            cd ${{ secrets.CANDIDATE_CLIENT_LYNX_DOCROOT }}
+            git fetch origin prod
+            git checkout prod
+            git pull origin prod
