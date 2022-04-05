@@ -1,0 +1,7 @@
+lynx_client.content:
+  path: '/content/{id}'
+  defaults:
+    _title_callback: '\Drupal\lynx_client\Controller\LynxClientController::getTitle'
+    _controller: '\Drupal\lynx_client\Controller\LynxClientController::view'
+  requirements:
+    _access: 'TRUE'
