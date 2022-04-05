@@ -4,4 +4,4 @@ lynx_client.content:
     _title_callback: '\Drupal\lynx_client\Controller\LynxClientController::getTitle'
     _controller: '\Drupal\lynx_client\Controller\LynxClientController::view'
   requirements:
-    _permission: 'view any published content'
+    _access: 'TRUE'
