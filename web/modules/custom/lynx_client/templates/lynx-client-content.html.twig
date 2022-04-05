@@ -1,0 +1,16 @@
+<header>
+	<div class="node__meta">
+		<span>Submitted on {{date}}</span>
+	</div>
+</header>
+<div class="node__content clearfix">
+	<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"
+		{{body|raw}}
+	</div>
+	<div class="field field--name-field-image field--type-image field--label-hidden field__item">
+		<img src="{{img.url}}" alt="{{img.alt}}"/>
+	</div>
+	<div class="field field--name-field-url field--type-link field--label-hidden field__item">
+		<a href="{{link.uri}}">{{link.title}}</a>
+	</div>
+</div>
