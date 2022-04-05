@@ -1,0 +1,5 @@
+name: Lynx Client
+type: module
+description: Allows client boxes to gather data via API from server
+core_version_requirement: ^9
+package: Linkwell

@@ -1,0 +1,14 @@
+<?php
+
+const LYNX_CONTENT_API = "https://content-lynx.linkwellhealth.com/";
+
+/**
+ * Implements hook_theme().
+ */
+function lynx_client_theme($existing, $type, $theme, $path) {
+  return [
+    'lynx_client_content' => [
+      'variables' => ['title' => NULL, 'date' => NULL, 'modified' => NULL, 'body' => NULL, 'img' => NULL, 'link' => NULL],
+    ],
+  ];
+}
